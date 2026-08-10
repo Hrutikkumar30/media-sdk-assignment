@@ -1,12 +1,15 @@
-/// <reference types="vite/client" />
+import type { ClientConfig } from "@my-app/media-react";
 
-import { ClientConfig } from '@my-app/media-core';
+const apiKey = import.meta.env.VITE_PEXELS_API_KEY;
 
-/**
- * Centralized API Configuration layer
- */
+if (!apiKey) {
+  throw new Error(
+    "VITE_PEXELS_API_KEY is not configured. Please add it to your environment variables.",
+  );
+}
+
 export const API_CONFIG: ClientConfig = {
-  apiKey: import.meta.env.VITE_PEXELS_API_KEY || 'DEMO_KEY',
-  baseUrl: import.meta.env.VITE_API_BASE_URL || 'https://api.pexels.com/v1',
+  apiKey,
+  baseUrl: import.meta.env.VITE_API_BASE_URL || "https://api.pexels.com/v1",
   timeout: 10000,
 };
