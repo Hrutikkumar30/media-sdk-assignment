@@ -14,7 +14,8 @@ coverage/
 
 # Environment files
 .env
-.env.*
+.env.local
+.env.*.local
 !.env.example
 .env.example
 
@@ -26,10 +27,8 @@ pnpm-debug.log*
 
 # OS files
 .DS_Store
+AGENTS.md
 
 # Editor / IDE
 .vscode/
 .idea/
-
-# AI / agent files
-AGENTS.md

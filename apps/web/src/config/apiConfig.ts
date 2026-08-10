@@ -1,12 +1,13 @@
+/// <reference types="vite/client" />
 import type { ClientConfig } from "@my-app/media-react";
 
-const apiKey = import.meta.env.VITE_PEXELS_API_KEY;
+const apiKey = (import.meta as any).env?.VITE_PEXELS_API_KEY;
 
 const baseUrl =
-  import.meta.env.VITE_API_BASE_URL || "https://api.pexels.com/v1";
+  (import.meta as any).env?.VITE_API_BASE_URL || "https://api.pexels.com/v1";
 
 export const API_CONFIG: ClientConfig = {
-  apiKey,
+  apiKey: apiKey || "DEMO_KEY",
   baseUrl,
   timeout: 10000,
 };
