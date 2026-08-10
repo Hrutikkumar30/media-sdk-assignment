@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "./apps/web/src/*"
+      ],
+      "@my-app/media-core": ["./packages/media-core/src/index.ts"],
+      "@my-app/media-native": ["./packages/media-native/src/index.ts"],
+      "@my-app/media-react": ["./packages/media-react/src/index.ts"],
+      "@my-app/media-ui-react": ["./packages/media-ui-react/src/index.ts"],
+      "@my-app/media-ui-native": ["./packages/media-ui-native/src/index.ts"]
+    },
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  }
+}

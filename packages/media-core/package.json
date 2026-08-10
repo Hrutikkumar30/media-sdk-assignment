@@ -1,0 +1,14 @@
+{
+  "name": "@my-app/media-core",
+  "version": "1.0.0",
+  "description": "Core media API client with caching, deduplication, and events",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
